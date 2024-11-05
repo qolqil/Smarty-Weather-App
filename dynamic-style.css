@@ -1,0 +1,220 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffcc70, #c850c0);
+    color: #fff;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+}
+
+body.light-theme {
+    background: linear-gradient(135deg, #c8e4f7, #f6d365);
+    color: #333;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.date-time {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.theme-toggle {
+    background: #ff5c8a;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    background: #d94f76;
+    transform: translateY(-3px);
+}
+
+.main-content {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    height: 450px;
+    background-image: url('path/to/your/hero-image.jpg');
+    /* Update with a relevant image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.search-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #ff5c8a;
+    color: #fff;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background-color: #d94f76;
+    animation: buttonBounce 0.5s ease;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.weather-info,
+.weekly-forecast,
+.hourly-slider-container {
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.5s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hourly-slider-container input[type="range"] {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer.light-theme {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+/* New Styles for Map Integration */
+
+/* Weekly Forecast Container Styling */
+.weekly-forecast-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align items at the top */
+    gap: 20px;
+    margin: 20px auto;
+    /* Center the container vertically */
+    max-width: 1100px;
+    transition: all 0.5s;
+}
+
+/* Weekly Forecast Styling (Adjusted) */
+.weekly-forecast {
+    width: 60%;
+    padding: 25px;
+    margin: 0;
+    /* Remove any potential default margin that could push it down */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Map Container Styling (Adjusted) */
+.map-container {
+    width: 40%;
+    height: 450px;
+    /* Keep this height for the map */
+    margin: 0;
+    /* Ensure there's no margin pushing the map up or down */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Map Styling */
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}

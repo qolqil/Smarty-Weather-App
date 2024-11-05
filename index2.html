@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTY Weather - Dynamic</title>
+    <link rel="stylesheet" href="dynamic-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">SMARTY Weather</h1>
+            <div id="date-time" class="date-time" aria-live="polite" aria-label="Current date and time"></div>
+            <button id="theme-toggle-btn" class="theme-toggle"
+                aria-label="Toggle light or dark theme">Light/Dark</button>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="hero">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="search-controls">
+                    <input type="text" id="city-input" class="input" placeholder="Enter city name"
+                        aria-label="City name input">
+                    <div class="button-group">
+                        <button id="search-btn" class="button" aria-label="Search weather by city">Search</button>
+                        <button id="location-btn" class="button" aria-label="Get weather for current location">Current
+                            Location</button>
+                        <button id="toggle-temp-unit" class="button"
+                            aria-label="Toggle temperature unit between Celsius and Fahrenheit">Toggle °C/°F</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="weather-info" class="weather-info" aria-live="polite"></section>
+        <section id="hourly-slider-container" class="hourly-slider-container">
+            <label for="hourly-slider" class="sr-only">Hourly Weather Forecast Slider</label>
+            <input type="range" id="hourly-slider" min="0" max="7" value="0" aria-valuemin="0" aria-valuemax="7"
+                aria-label="Select hourly forecast">
+            <div id="hourly-forecast-slider-output"></div>
+        </section>
+        <section id="weekly-forecast-container" class="weekly-forecast-container">
+            <div id="weekly-forecast" class="weekly-forecast">
+                <table id="forecast-table"></table>
+            </div>
+            <div id="map-container" class="map-container">
+                <!-- Map will be rendered here -->
+                <div id="map"></div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>Stay Updated with SMARTY Weather!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
