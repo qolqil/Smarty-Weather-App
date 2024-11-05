@@ -303,21 +303,21 @@ function renderMap(latitude, longitude, city) {
 function getWeatherIcon(weatherDescription) {
     switch (weatherDescription) {
         case 'clear sky':
-            return 'icons/sunny.png';
+            return 'sunny.png';
         case 'few clouds':
         case 'scattered clouds':
         case 'broken clouds':
-            return 'icons/cloudy.png';
+            return 'cloudy.png';
         case 'shower rain':
         case 'rain':
-            return 'icons/rainy.png';
+            return 'rainy.png';
         case 'thunderstorm':
-            return 'icons/stormy.png';
+            return 'stormy.png';
         case 'snow':
-            return 'icons/snowy.png';
+            return 'snowy.png';
         case 'mist':
-            return 'icons/mist.png';
+            return 'mist.png';
         default:
-            return 'icons/default.png';
+            return 'default.png';
     }
 }
